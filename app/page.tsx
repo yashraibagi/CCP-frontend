@@ -68,7 +68,7 @@ export default function Home() {
       <div className='max-w-6xl mx-auto'>
         {/* Header */}
         <div className='mb-8 md:mb-12'>
-          <h1 className='text-3xl md:text-4xl font-bold text-balance mb-2'>Customer Churn Prediction</h1>
+          <h1 className='text-3xl md:text-4xl font-bold text-balance mb-2'>ChurnGuard AI</h1>
           <p className='text-muted-foreground text-base md:text-lg'>Predict the likelihood of customer churn based on key metrics</p>
         </div>
 
