@@ -7,25 +7,14 @@ const _geist = Geist({ subsets: ["latin"] });
 const _geistMono = Geist_Mono({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: 'ChurnGuard AI - Customer Churn Prediction',
-  description: 'A simple web app to predict customer churn using a machine learning model.',
-  generator: 'ChurnGuard AI',
+  title: {
+    default: "ChurnGuard AI",
+    template: "%s | ChurnGuard AI",
+  },
+  description: "AI-powered web app to predict customer churn using machine learning.",
   icons: {
-    icon: [
-      {
-        url: '/icon-light-32x32.png',
-        media: '(prefers-color-scheme: light)',
-      },
-      {
-        url: '/icon-dark-32x32.png',
-        media: '(prefers-color-scheme: dark)',
-      },
-      {
-        url: '/icon.svg',
-        type: 'image/svg+xml',
-      },
-    ],
-    apple: '/apple-icon.png',
+    icon: "/churnguard-logo.png",
+    apple: "/churnguard-logo.png",
   },
 }
 
@@ -37,10 +26,13 @@ export default function RootLayout({
  {
   return (
     <html lang="en">
-      <body className="font-sans antialiased">
-        {children}
-        <Analytics />
-      </body>
-    </html>
+  <head>
+    <title>ChurnGuard AI</title>
+  </head>
+  <body className="font-sans antialiased">
+    {children}
+    <Analytics />
+  </body>
+</html>
   )
 }
